@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="editExamForm" prefHeight="550.0" prefWidth="550.0" style="-fx-background-color: #385170;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.Teacher.EditExamController">
+    <children>
+        <Text fill="WHITE" layoutX="121.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MODIFICA DATI ESAME">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="10.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME ESAME">
+            <font>
+                <Font name="System Bold Italic" size="25.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="10.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA ESAME">
+            <font>
+                <Font name="System Bold Italic" size="25.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="10.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORARIO ESAME">
+            <font>
+                <Font name="System Bold Italic" size="25.0" />
+            </font>
+        </Text>
+        <Text fill="WHITE" layoutX="10.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AULA ESAME">
+            <font>
+                <Font name="System Bold Italic" size="25.0" />
+            </font>
+        </Text>
+        <TextField fx:id="tfEditAula" layoutX="300.0" layoutY="338.0" prefWidth="188.0" promptText="Inserisci aula esame" />
+        <Button fx:id="modificabtnEdit" layoutX="201.0" layoutY="437.0" mnemonicParsing="false" onAction="#modifyBTNEdit" text="MODIFICA">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Button>
+      <ChoiceBox fx:id="boxEditNome" layoutX="299.0" layoutY="129.0" prefWidth="190.0" />
+      <DatePicker fx:id="datePickerEditEx" layoutX="300.0" layoutY="199.0" prefWidth="190.0" />
+      <ChoiceBox fx:id="boxEditOrario" layoutX="300.0" layoutY="269.0" prefWidth="190.0" />
+    </children>
+</AnchorPane>
