@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="editForm" prefHeight="650.0" prefWidth="600.0" style="-fx-background-color: #385170;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.Secretary.EditStudentController">
+   <children>
+      <Text fill="WHITE" layoutX="120.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MODIFICA DATI STUDENTE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="10.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="10.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COGNOME">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="10.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATA DI NASCITA">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="10.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESIDENZA">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="10.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PIANO DI STUDI">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="10.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfNomeEdit" layoutX="300.0" layoutY="128.0" prefWidth="188.0" promptText="Inserisci il nome" />
+      <TextField fx:id="tfCognEdit" layoutX="300.0" layoutY="198.0" prefWidth="188.0" promptText="Inserisci Cognome" />
+      <TextField fx:id="tfResiEdit" layoutX="300.0" layoutY="338.0" prefWidth="188.0" promptText="Inserisci residenza" />
+      <DatePicker fx:id="datePickerEdit" layoutX="300.0" layoutY="268.0" prefWidth="188.0" promptText="Inserisci data di nascita" />
+      <ChoiceBox fx:id="boxStudiEdit" layoutX="300.0" layoutY="409.0" prefWidth="188.0" />
+      <Button fx:id="modificabtnEdit" layoutX="226.0" layoutY="575.0" mnemonicParsing="false" onAction="#modifyBTNEdit" text="MODIFICA">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="tfPasswEdit" layoutX="300.0" layoutY="478.0" prefWidth="188.0" promptText="Inserisci password" />
+   </children>
+</AnchorPane>

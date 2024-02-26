@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane fx:id="tabPaneDashboard" style="-fx-background-color: #347474;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.Student.StudentController">
+   <tabs>
+      <Tab fx:id="tabHome" closable="false" text="HOME">
+         <content>
+            <AnchorPane fx:id="dashboardHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0">
+               <children>
+                  <TableView fx:id="tabellaAppelli" layoutX="185.0" layoutY="180.0" prefHeight="300.0" prefWidth="650.0">
+                    <columns>
+                        <TableColumn fx:id="colonnaIdEx" prefWidth="130.0" text="idEsame" />
+                      <TableColumn fx:id="colonnaNomeEx" prefWidth="130.0" text="nomeEsame" />
+                      <TableColumn fx:id="colonnaDataEx" prefWidth="130.0" text="dataEsame" />
+                        <TableColumn fx:id="colonnaOraEx" prefWidth="130.0" text="orarioEsame" />
+                        <TableColumn fx:id="colonnaAulaEx" prefWidth="130.0" text="aulaEsame" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="prenotaExbtn" layoutX="427.0" layoutY="525.0" mnemonicParsing="false" onAction="#bookBTN" prefHeight="46.0" prefWidth="166.0" text="PRENOTA">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="373.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="APPELLI DISPONIBILI">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="852.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESAMI ESEGUITI">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Text>
+                  <TableView fx:id="tabellaVoto" layoutX="536.0" layoutY="650.0" prefHeight="300.0" prefWidth="843.0">
+                    <columns>
+                      <TableColumn fx:id="colonnaIdV" prefWidth="120.0" text="idVoto" />
+                      <TableColumn fx:id="colonnaIdPreV" prefWidth="120.0" text="idPreVoto" />
+                        <TableColumn fx:id="colonnaIdExV" prefWidth="120.0" text="idEsameVoto" />
+                        <TableColumn fx:id="colonnaesameV" prefWidth="120.0" text="nomeExVoto" />
+                        <TableColumn fx:id="colonnaMatrV" prefWidth="120.0" text="matricolaVoto" />
+                        <TableColumn fx:id="colonnaVoto" prefWidth="120.0" text="voto" />
+                        <TableColumn fx:id="colonnaConferma" prefWidth="120.0" text="conferma" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="exitbtn" layoutX="1755.0" layoutY="999.0" mnemonicParsing="false" onAction="#logoutBTN" text="LOGOUT">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="acceptExbtn" layoutX="719.0" layoutY="989.0" mnemonicParsing="false" onAction="#acceptBTN" text="CONFERMA">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="declineExbtn" layoutX="1043.0" layoutY="989.0" mnemonicParsing="false" onAction="#declineBTN" prefWidth="166.0" text="RIFIUTA">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tabellaPre" layoutX="1064.0" layoutY="180.0" prefHeight="300.0" prefWidth="720.0">
+                    <columns>
+                      <TableColumn fx:id="colonnaPreJ" prefWidth="120.0" text="idPrenotazione" />
+                      <TableColumn fx:id="colonnaExJ" prefWidth="120.0" text="idEsame" />
+                        <TableColumn fx:id="colonnaNomeJ" prefWidth="120.0" text="nomeEsame" />
+                        <TableColumn fx:id="colonnaDataJ" prefWidth="120.0" text="dataEsame" />
+                        <TableColumn fx:id="colonnaOraJ" prefWidth="120.0" text="orarioEsame" />
+                        <TableColumn fx:id="colonnaAulaJ" prefWidth="120.0" text="aulaEsame" />
+                    </columns>
+                  </TableView>
+                  <Text fill="WHITE" layoutX="1291.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESAMI PRENOTATI">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="eliminabtn" layoutX="1341.0" layoutY="525.0" mnemonicParsing="false" onAction="#deleteBTN" prefWidth="166.0" text="ELIMINA">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab fx:id="tabFeesSurvey" closable="false" text="TASSE E QUESTIONARI">
+        <content>
+          <AnchorPane fx:id="dashboardFeesSurvey" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tabellaFees" layoutX="581.0" layoutY="184.0" prefHeight="200.0" prefWidth="780.0">
+                    <columns>
+                      <TableColumn fx:id="colonnaIdF" prefWidth="130.0" text="idTassa" />
+                      <TableColumn fx:id="colonnaMatrF" prefWidth="130.0" text="matricolaTassa" />
+                        <TableColumn fx:id="colonnaCauF" prefWidth="130.0" text="causale" />
+                        <TableColumn fx:id="colonnaImpF" prefWidth="130.0" text="importo" />
+                        <TableColumn fx:id="colonnaDataF" prefWidth="130.0" text="dataScadenza" />
+                        <TableColumn fx:id="colonnaPagataF" prefWidth="130.0" text="pagata" />
+                    </columns>
+                  </TableView>
+                  <Text fill="WHITE" layoutX="866.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELENCO TASSE">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="paybtn" layoutX="817.0" layoutY="405.0" mnemonicParsing="false" onAction="#payBTN" text="EFFETTUA PAGAMENTO">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tabellaQuest" layoutX="779.0" layoutY="605.0" prefHeight="200.0" prefWidth="390.0">
+                    <columns>
+                      <TableColumn fx:id="colonnaIdQuest" prefWidth="130.0" text="idQuestionario" />
+                      <TableColumn fx:id="colonnaNomeQuest" prefWidth="130.0" text="NomeEsame" />
+                        <TableColumn fx:id="colonnaEffettuato" prefWidth="130.0" text="effettuato" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="eseguiQuestbtn" layoutX="819.0" layoutY="855.0" mnemonicParsing="false" onAction="#questBTN" prefHeight="46.0" prefWidth="300.0" text="ESEGUI QUESTIONARIO">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Text fill="WHITE" layoutX="878.0" layoutY="570.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUESTIONARI">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+   </tabs>
+</TabPane>
